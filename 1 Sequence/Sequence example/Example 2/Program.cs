@@ -30,7 +30,9 @@ namespace Example_2
             // Adds a blank line for better spacing
             Console.WriteLine();
             // Display a message AND goes to the next line
-            Console.WriteLine("My fullname is {0} {1}!", surname,name);
+            Console.WriteLine("My fullname is {0} {1}!", surname, name);
+            // Adds a blank line for better spacing
+            Console.WriteLine();
 
             Console.Write("Press enter to continue!");
             // Wait for the user to press Enter to continue

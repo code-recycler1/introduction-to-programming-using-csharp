@@ -12,7 +12,7 @@ namespace Example_4
         {
             // Set console colors
             Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
             Console.Title = "Example 4";
 

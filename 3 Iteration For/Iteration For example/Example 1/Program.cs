@@ -38,7 +38,7 @@ namespace Example_1
             Console.WriteLine(output);
 
             // Wait for user input before closing
-            Console.WriteLine("\nPress enter to continue...");
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
     }

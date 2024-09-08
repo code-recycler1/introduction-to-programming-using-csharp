@@ -17,7 +17,7 @@ namespace Example_3
             // Clears the console so the colors take effect immediately
             Console.Clear();
             // To change the content of the title bar of the screen.
-            Console.Title = "Example 2";
+            Console.Title = "Example 3";
 
             // Declare variables
             int number1 = 15, number2 = 4, quotient1;

@@ -30,7 +30,7 @@ namespace Example_5
             number3 = int.Parse(Console.ReadLine()); // Convert the input string to an integer
 
             // Perform operation
-            if (number1 >= number2 && number1 >= number3)
+            if (number1 >= number2 && number1 > number3)
             {
                 result = number1 - number3;
 
