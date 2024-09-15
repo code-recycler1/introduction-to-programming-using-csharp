@@ -19,48 +19,61 @@ namespace Methods_exercises
             dateOfBirthTraveler, dateOfBirthCompanion = DateTime.Today;
             int numberOfNights = 7;
 
-
+            // Prompt user for their name
             traveler = ReadName("Enter your name:");
+            // Prompt user for their companion's name
             companion = ReadName($"\n(Fill in 'alone' if you are traveling solo)\nWho is your companion, {traveler}?");
 
+            // Prompt user for their date of birth
             dateOfBirthTraveler = ReadDateOfBirth($"{traveler}, what is your date of birth?");
 
             messageDepartureDate = traveler;
 
+            // If the user is not traveling alone, prompt for companion's date of birth
             if (companion.ToLower() != "alone")
             {
                 dateOfBirthCompanion = ReadDateOfBirth($"What is the date of birth of \"{companion}\":");
                 messageDepartureDate += $" and {companion}";
             }
 
+            // Suggest a departure date
             messageDepartureDate += $", we suggest {departureDate.ToLongDateString()} as the departure date." +
                 $" You can still change this date! ";
 
+            // Prompt user for the destination
             destination = ReadDestination();
 
+            // Allow user to adjust the departure date
             AdjustDepartureDate(messageDepartureDate, ref departureDate);
+            // Allow user to adjust the number of nights
             AdjustNumberOfNights($"\nNumber of nights: {numberOfNights} days ", ref numberOfNights);
 
+            // Calculate the return date based on departure date and number of nights
             returnDate = CalculateReturnDate(departureDate, numberOfNights);
 
+            // Print the travel information
             PrintTravelInformation(traveler, companion, dateOfBirthTraveler, dateOfBirthCompanion, destination, departureDate, returnDate);
 
+            // Wait for user to press Enter before closing
             PressEnter("Press enter to continue...");
         }
 
-        #region Methodes
+        #region Methods
         private static void AdjustScreenColors()
         {
+            // Set the background color to white and text color to dark blue
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
+            // Set the console title to "Exercise 4"
             Console.Title = "Exercise 4";
         }
 
-        private static void PressEnter(string boodschap)
+        private static void PressEnter(string message)
         {
+            // Prompt the user to press Enter to continue
             Console.WriteLine();
-            Console.Write(boodschap);
+            Console.Write(message);
             Console.ReadLine();
         }
 
@@ -68,6 +81,7 @@ namespace Methods_exercises
         {
             string name;
 
+            // Prompt the user for a name until a valid input is received
             do
             {
                 Console.Write($"{question} ");
@@ -82,6 +96,7 @@ namespace Methods_exercises
             string input;
             DateTime date;
 
+            // Prompt the user for a date until a valid input is received
             do
             {
                 Console.Write($"{question} ");
@@ -96,6 +111,7 @@ namespace Methods_exercises
             DateTime dateOfBirth;
             int maximumAge = 100;
 
+            // Prompt the user for a date of birth until a valid input is received and the age is within a reasonable range
             do
             {
                 dateOfBirth = ReadDate(question);
@@ -108,6 +124,7 @@ namespace Methods_exercises
         {
             string input;
 
+            // Allow the user to adjust the departure date
             do
             {
                 Console.WriteLine("\nIf the suggested date is okay, press enter! ");
@@ -120,7 +137,6 @@ namespace Methods_exercises
                 }
 
             } while (!DateTime.TryParse(input, out date) || date < DateTime.Today.AddDays(1));
-
         }
 
         private static int ReadNumberOfDays(string question)
@@ -128,6 +144,7 @@ namespace Methods_exercises
             string input;
             int numberOfDays;
 
+            // Prompt the user for the number of days until a valid input is received
             do
             {
                 Console.Write(question);
@@ -141,6 +158,7 @@ namespace Methods_exercises
         {
             string input;
 
+            // Allow the user to adjust the number of nights
             do
             {
                 Console.WriteLine(message);
@@ -158,6 +176,7 @@ namespace Methods_exercises
         {
             string input;
 
+            // Prompt the user for the destination until a valid input is received
             do
             {
                 Console.Write("Where is the trip going? ");
@@ -169,6 +188,7 @@ namespace Methods_exercises
 
         private static DateTime CalculateReturnDate(DateTime date, int numberOfDays)
         {
+            // Calculate the return date based on the departure date and number of days
             DateTime returnDate = date.AddDays(numberOfDays);
 
             return returnDate;
@@ -185,6 +205,7 @@ namespace Methods_exercises
         {
             string title = $"Travel Information: {destination}";
 
+            // Clear the console and print the travel information
             Console.Clear();
             Console.WriteLine(title);
             Console.WriteLine(new string('-', title.Length));
