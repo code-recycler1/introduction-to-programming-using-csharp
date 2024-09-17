@@ -12,7 +12,7 @@ namespace String_Functions_exercises
         {
             Methods.AdjustScreenColors("Exercise 1");
 
-            string input = Methods.GetInput("Enter a number: ");
+            string input = Methods.GetPositiveIntegerInput("Enter a number: ").ToString();
             int sum = 0;
 
             for (int i = 0; i < input.Length; i++)

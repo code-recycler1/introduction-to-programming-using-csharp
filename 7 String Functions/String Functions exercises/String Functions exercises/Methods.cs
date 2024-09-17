@@ -29,6 +29,19 @@ namespace String_Functions_exercises
             return input;
         }
 
+        public static int GetPositiveIntegerInput(string prompt)
+        {
+            int number;
+            string input;
+
+            do
+            {
+                input = GetInput(prompt);
+            } while (!int.TryParse(input, out number) || number < 0);
+
+            return number;
+        }
+
         public static void PressEnter()
         {
             Console.WriteLine();
