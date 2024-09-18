@@ -1,0 +1,3 @@
+John;175;70.5
+Jane Doe;168;65
+Marie De Angelo;180;90
