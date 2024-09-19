@@ -1,0 +1,3 @@
+﻿City Pirates;b;g;6;3
+The Villagers;*;-;10;5
+No Pain No Gain;=;$;12;7

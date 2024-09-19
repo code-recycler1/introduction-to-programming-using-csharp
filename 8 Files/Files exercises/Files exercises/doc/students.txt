@@ -1,0 +1,10 @@
+﻿r0487012mcallister-jones    *john
+r4512786 johnson     *michael
+r5678102di angelo   * david
+r7890124brown       *jennifer
+r3248510  jones       *jessica
+r5645568    fitzpatrick-smith      *sarah
+r0124588 miller      * james
+r0035624de la torre       *  elizabeth
+r0037855 rodriguez   *  christopher
+r0054212de la cruz    *daniel
