@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace Files_exercises
 {
-    internal class Methods
+    public static class Methods
     {
         public static void AdjustScreenColors(string title)
         {
